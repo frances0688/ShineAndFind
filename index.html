@@ -9,8 +9,25 @@
     <title>Shine and Find</title>
 </head>
 <body>
-    <h1>Shine & Find</h1>
-    <div id="game-canvas"></div>
+    <header>
+        <h1>Shine & Find</h1>
+        <nav>
+            <a id="church" href=""><div>Church</div></a>
+            <a id="boat" href=""><div>Boat</div></a>
+            <a id="garden" href=""><div>Garden</div></a>
+        </nav>
+    </header>
+    <div class="playground"> 
+        <div id="game-canvas"></div>
+        <div>
+            <ul id="itemsToSearch">
+            </ul>
+        </div>
+    </div>
+        
+    <script type="text/javascript" src="./item.js"></script>
+    <script type="text/javascript" src="./church.js"></script>
+    <script type="text/javascript" src="./items.js"></script>
     <script type="text/javascript" src="./game.js"></script>
     <script type="text/javascript" src="./main.js"></script>
 </body>

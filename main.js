@@ -1,4 +1,6 @@
-const game = new Game()
+let game;
+let items;
+initializeGame(church)
 
 function preload() {
 	game.preload()
@@ -12,5 +14,21 @@ function setup() {
 
 function draw() {
 	game.draw()
+	items.draw()
 }
 
+function initializeGame(room) {
+	game = new Game(room.backgroundImage);
+	items = new Items(room.hiddenItems);
+	for(let item of room.hiddenItems) {
+		document.getElementById('itemsToSearch').appendChild(item.li);
+	}
+}
+
+const churchBtn = document.getElementById('church');
+const boatBtn = document.getElementById('boat');
+const gardenBtn = document.getElementById('garden');
+
+churchBtn.addEventListener('click', ()=>initializeGame(church));
+boatBtn.addEventListener('click', ()=>initializeGame(boat));
+gardenBtn.addEventListener('click', ()=>initializeGame(garden));

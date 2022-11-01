@@ -1,11 +1,12 @@
 class Game {
-	constructor() {
+	constructor(backgroundImage) {
 		this.backgroundImage;
+        this.imageStringPath = backgroundImage;
 	}
 
 
 	preload() {
-		this.backgroundImage = loadImage("./img/church-1000x606.jpeg");    
+		this.backgroundImage = loadImage(this.imageStringPath);   
 	}
     
 
@@ -16,19 +17,17 @@ class Game {
         function update(e){
             let x = e.clientX || e.touches[0].clientX
             let y = e.clientY || e.touches[0].clientY
-          
-            document.documentElement.style.setProperty('--cursorX', x-350 + 'px')
-            document.documentElement.style.setProperty('--cursorY', y-100 + 'px')
+          console.log(window.innerWidth, window.innerHeight)
+            document.documentElement.style.setProperty('--cursorX', x-Math.floor(window.innerWidth/6) + 'px')
+            document.documentElement.style.setProperty('--cursorY', y-300 + 'px')
           }
           
           document.addEventListener('mousemove',update)
           document.addEventListener('touchmove',update)
 
+                   
+       
         }
-}
-
-
-
-
-
-
+        
+        
+    }
