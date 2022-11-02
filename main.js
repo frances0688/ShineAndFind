@@ -20,10 +20,15 @@ function draw() {
 function initializeGame(room) {
 	game = new Game(room.backgroundImage);
 	items = new Items(room.hiddenItems);
-	for(let item of room.hiddenItems) {
+	for(let item of items.selectedItems) {
+
 		document.getElementById('itemsToSearch').appendChild(item.li);
 	}
 }
+
+function mousePressed(i){
+	items.found()
+} 
 
 const churchBtn = document.getElementById('church');
 const boatBtn = document.getElementById('boat');

@@ -64,3 +64,11 @@ a>div {
       rgba(0,0,0,.95) 100%
     )
   }
+
+  ul {
+    list-style-type: none;
+  }
+
+  .strikeThrough {
+    text-decoration: line-through;
+  }
