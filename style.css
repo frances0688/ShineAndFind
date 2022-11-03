@@ -50,7 +50,7 @@ a>div {
     text-align: center;
 }
 
-#game-canvas:before {
+.game-canvas:before {
     content: '';
     display: block;
     width: 1000px;
