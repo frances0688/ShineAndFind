@@ -25,7 +25,6 @@ function initializeGame(roomGame, hiddenItems) {
 
 function preload() { 
 	game.preload();
-	// sherlockMusic = loadSound('../music/Sherlockmusic.mp3');
 }
 
 function setup() {
@@ -33,12 +32,12 @@ function setup() {
 	canvas.parent('game-canvas');
 	boatGame.preload();
 	gardenGame.preload();
-	// backgroundMusic();
 }
 
 function draw() {
 	game.draw()
 	items.draw()
+	
 }
 
 function mousePressed(i){
@@ -73,12 +72,6 @@ function restart() {
 	window.location.reload();
 }
 
-// function backgroundMusic() {
-// 	sherlockMusic.play();
-// 	sherlockMusic.loop();
-// 	sherlockMusic.setVolume(0.2);
-// 	userStartAudio();
-// }
 
 const churchBtn = document.getElementById('church');
 const boatBtn = document.getElementById('boat');

@@ -1,14 +1,19 @@
 let gardenHiddenItems = [
-    new Item ('Chalice', 138, 212, 51, 90),
-    new Item ('Hand Print', 780, 363, 60, 35),
-    new Item ('Paint Can', 573, 425, 30, 50),
-    new Item ('Lion', 732, 80, 35, 60),
-    new Item ('Diamond', 198, 155, 59, 51),
-    new Item ('Butterfly', 384, 148, 31, 32),
-    new Item ('Scroll', 705, 365, 16, 56),
-    new Item ('Pinecone', 622, 327, 40, 81),
-    new Item ('Angel', 536, 214, 42, 103),
-    new Item ('Flashlight', 450, 520, 63, 32)
+    new Item ('Sun', 250, 505, 79, 77),
+    new Item ('Olives', 120, 450, 45, 30),
+    new Item ('Watering Can', 160, 230, 43, 43),
+    new Item ('Cat', 750, 385, 100, 95),
+    new Item ('Bee', 600, 170, 27, 27),
+    new Item ('Squirrel', 180, 95, 60, 35),
+    new Item ('Bird Nest', 240, 115, 33, 20),
+    new Item ('Harp', 120, 160, 30, 70),
+    new Item ('Birdcage', 435, 145, 30, 40),
+    new Item ('Grapevine', 630, 85, 60, 45),
+    new Item ('Snake', 760, 260, 62, 78),
+    new Item ('Scarf', 627, 150, 28, 48),
+    new Item ('Apples', 35, 13, 45, 27),
+    new Item ('Net', 255, 265, 40, 45),
+    new Item ('Ladder', 550, 40, 46, 162),
 ]
 
 let backgroundImage = "./img/garden-1000x606.jpeg";

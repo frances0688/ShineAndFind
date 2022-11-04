@@ -8,7 +8,12 @@ let churchHiddenItems = [
     new Item ('Scroll', 705, 365, 16, 56),
     new Item ('Pinecone', 622, 327, 40, 81),
     new Item ('Angel', 536, 214, 42, 103),
-    new Item ('Flashlight', 450, 520, 63, 32)
+    new Item ('Flashlight', 450, 520, 63, 32),
+    new Item ('Basket', 355, 250, 41, 79),
+    new Item ('Omega', 457, 230, 26, 28),
+    new Item ('Backpack', 493, 370, 43, 63),
+    new Item ('Crown', 180, 333, 47, 36),
+    new Item ('Magnifying Glass', 237, 318, 32, 98),
 ];
 
 backgroundImage = "./img/church-1000x606.jpeg";
