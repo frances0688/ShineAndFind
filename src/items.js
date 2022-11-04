@@ -26,9 +26,11 @@ class Items {
             if ((mouseX > this.selectedItems[i].x) && (mouseX < this.selectedItems[i].x + this.selectedItems[i].w) &&
             (mouseY > this.selectedItems[i].y) && (mouseY < this.selectedItems[i].y + this.selectedItems[i].h)) { 
                 let itemLocation = this.selectedItems[i].li;
-                itemLocation.classList.add('strikeThrough');  
-                
+                itemLocation.classList.add('strikeThrough');    
             }
-        }
+        } 
+            gameWon()
     }
+
+
 }

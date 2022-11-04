@@ -7,6 +7,8 @@ class Game {
 
 	preload() {
 		this.backgroundImage = loadImage(this.imageStringPath);   
+        startDiv.style.display = "block";
+        
 	}
     
 
@@ -14,11 +16,12 @@ class Game {
 	
         image(this.backgroundImage, 0, 0);
         
+        // flashlight effect
         function update(e){
             let x = e.clientX || e.touches[0].clientX
             let y = e.clientY || e.touches[0].clientY
     
-            document.documentElement.style.setProperty('--cursorX', x-Math.floor(window.innerWidth/6) + 'px')
+            document.documentElement.style.setProperty('--cursorX', x-Math.floor(window.innerWidth/9) + 'px')
             document.documentElement.style.setProperty('--cursorY', y-300 + 'px')
           }
           

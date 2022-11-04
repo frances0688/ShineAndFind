@@ -6,31 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.2/lib/p5.js"></script>
     <link rel="stylesheet" href="./style.css"/>
-    <title>Shine and Find</title>
+    <title>Shine & Find</title>
 </head>
 <body>
-    <header>
-        <h1>Shine & Find</h1>
-        <nav>
-            <button id="church"><div>Church</div></button>
-            <button id="boat"><div>Boat</div></button>
-            <button id="garden"><div>Garden</div></button>
-        </nav>
-    </header>
-    <div class="playground"> 
-        <div id="game-canvas" class="game-canvas"></div>
-        <div>
-            <ul id="itemsToSearch">
-            </ul>
+    <content>
+        <header>
+            <h1>Shine & Find</h1>
+            <nav>
+                <button id="church"><div><p>Church</p></div></button>
+                <button id="boat"><div><p>Boat</p></div></button>
+                <button id="garden"><div><p>Garden</p></div></button>
+            </nav>
+        </header>
+        <div class="playground"> 
+            <div id="game-canvas" class="game-canvas" style="display:none"></div>
+            <div id="start" style="display:none">
+                <a href="#" onclick="startGame()"><img src="./img/Sherlock.png" alt=""></a>
+            </div>
+            <div id="game-over" style="display:none">
+                <a href="#" onclick="restart()"><img src="./img/game-over.gif" alt=""></a>
+            </div>
+            <div id="game-won" style="display:none">
+                <a href="#" onclick="restart()"><img src="./img/SherlockWin.png" alt=""></a>
+            </div>
+            <div class="side">
+                <h2></h2>
+                <ul id="itemsToSearch">
+                </ul>
+                <div id="timer"></div>
+            </div>
         </div>
-    </div>
-        
-    <script type="text/javascript" src="./item.js"></script>
-    <script type="text/javascript" src="./garden.js"></script>
-    <script type="text/javascript" src="./boat.js"></script>
-    <script type="text/javascript" src="./church.js"></script>
-    <script type="text/javascript" src="./items.js"></script>
-    <script type="text/javascript" src="./game.js"></script>
-    <script type="text/javascript" src="./main.js"></script>
+    </content>    
+    <script type="text/javascript" src="./src/timer.js"></script>
+    <script type="text/javascript" src="./src/item.js"></script>
+    <script type="text/javascript" src="./src/garden.js"></script>
+    <script type="text/javascript" src="./src/boat.js"></script>
+    <script type="text/javascript" src="./src/church.js"></script>
+    <script type="text/javascript" src="./src/items.js"></script>
+    <script type="text/javascript" src="./src/game.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
 </body>
+
 </html>

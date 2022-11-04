@@ -1,61 +1,146 @@
+@font-face {
+    font-family: sherlockFont;
+    src: url(./Sherlock\ Vintage.ttf);
+  }
+
 body {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-family: sans-serif;
-    background-color: #6c7f78;
+    font-family: sherlockFont;
+    background-image: url('./img/sherlockbackground.jpeg');
+    padding: 0;
+    margin: 0;
+}
+
+content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(83, 68, 56, 0.843);
+    margin: 2vw;
+    padding: 3%;
+}
+
+
+header {
+    font-size: 40px;
+    text-align: center;
+    
 }
 
 nav {
     display: flex;    
+    justify-content: space-between;
 }
 
-a>div {
-    margin: 3em 4em;
+h1 {
+    margin: 5px 350px;
+    padding: 20px 0 10px 0;
+    font-size: 70px;
+    background-color: rgb(220,214,196,.3);
+}
+
+button {
+    margin: 30px 100px;
+    font-family: sherlockFont;
+    font-size: 40px;
+    color: rgb(220,214,196);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+button>div {
+    display: flex;
+    margin: -10px;
+    background-color: rgba(0, 0, 0, 0.449);
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
 }
 
 .playground {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
-#church>div {
-    width: 10vw;
-    height: 10vh;
+#game-canvas, 
+#start,
+#game-over {
+    width: 1000px;
+    height: 606px
+}
+
+#start img {
+    width: 1000px;
+    height: 606px
+}
+
+#game-over img {
+    width: 1000px;
+    height: 606px
+}
+
+#game-won img {
+    width: 1000px;
+    height: 606px
+}
+
+#church {
+    width: 200px;
+    height: 120px;
     background-image: url("./img/church-1000x606.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
 }
 
-#boat>div {
-    width: 10vw;
-    height: 10vh;
+#boat {
+    width: 200px;
+    height: 120px;
     background-image: url("./img/boat-1000x606.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
 }
 
-#garden>div {
-    width: 10vw;
-    height: 10vh;
+#garden {
+    width: 200px;
+    height: 120px;
     background-image: url("./img/garden-1000x606.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    text-align: center;
 }
 
+.side {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50px;
+    background-color: rgb(220,214,196, .3);
+}
+
+h2 {
+    margin: 30px 0 0 0;
+    font-size: 40px;
+}
+
+ul {
+list-style-type: none;
+font-size: 24px;
+padding: 0;
+}
+
+.strikeThrough {
+text-decoration: line-through;
+}
+
+
+/* Flashlight effect */
 .game-canvas:before {
     content: '';
     display: block;
     width: 1000px;
     height: 606px;
-    position: fixed;
+    position:absolute;
     pointer-events: none;
     background: radial-gradient(
       circle 150px at var(--cursorX) var(--cursorY),
@@ -63,12 +148,66 @@ a>div {
       rgba(0,0,0,.5) 80%,
       rgba(0,0,0,.95) 100%
     )
-  }
+}
 
-  ul {
-    list-style-type: none;
-  }
 
-  .strikeThrough {
-    text-decoration: line-through;
-  }
+/* Timer styling */
+#timer {
+height: 200px;
+place-items: center;
+}
+
+.base-timer {
+position: relative;
+width: 200px;
+height: 200px;
+}
+
+.base-timer__svg {
+transform: scaleX(-1);
+}
+
+.base-timer__circle {
+fill: none;
+stroke: none;
+}
+
+.base-timer__path-elapsed {
+stroke-width: 10px;
+stroke: grey;
+}
+
+.base-timer__path-remaining {
+stroke-width: 10px;
+stroke-linecap: round;
+transform: rotate(90deg);
+transform-origin: center;
+transition: 1s linear all;
+fill-rule: nonzero;
+stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+color: rgb(37, 123, 84);
+}
+
+.base-timer__path-remaining.orange {
+color: rgb(148, 138, 55);
+}
+
+.base-timer__path-remaining.red {
+color: rgb(131, 46, 46);
+}
+
+.base-timer__label {
+position: absolute;
+width: 200px;
+height: 200px;
+top: 0;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 48px;
+}
+
+  
