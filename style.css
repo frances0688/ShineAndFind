@@ -40,7 +40,7 @@ h1 {
     margin: 5px 350px;
     padding: 20px 0 10px 0;
     font-size: 70px;
-    background-color: rgb(220,214,196,.3);
+    background-color: rgb(220,214,196,.4);
 }
 
 button {
@@ -115,7 +115,7 @@ button>div {
     flex-direction: column;
     align-items: center;
     margin-left: 50px;
-    background-color: rgb(220,214,196, .3);
+    background-color: rgb(220,214,196, .4);
 }
 
 h2 {

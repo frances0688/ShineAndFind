@@ -21,8 +21,8 @@ class Game {
             let x = e.clientX || e.touches[0].clientX
             let y = e.clientY || e.touches[0].clientY
     
-            document.documentElement.style.setProperty('--cursorX', x-Math.floor(window.innerWidth/9) + 'px')
-            document.documentElement.style.setProperty('--cursorY', y-300 + 'px')
+            document.documentElement.style.setProperty('--cursorX', x-150 + 'px')
+            document.documentElement.style.setProperty('--cursorY', y-360 + 'px')
           }
           
           document.addEventListener('mousemove',update)
